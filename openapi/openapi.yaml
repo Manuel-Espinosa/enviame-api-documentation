@@ -14,14 +14,14 @@ info:
   description:
     $ref: ./info-description.md
 tags:
-  - name: Echo
-    description: Example echo operations.
-  - name: User
+  - name: Deliveries
+    description: In this section are listed all the endpoints related with deliveries creation, label printing and manifest generation.
+  - name: Company
     description: Operations about users.
-  - name: Tag
+  - name: Pick up
     description: This is a tag description.
 servers:
-  - url: 'https://{tenant}/api/v1'
+  - url: 'https://stage.api.enviame.io/api/s2/v2/'
     variables:
       tenant:
         default: www
@@ -30,8 +30,8 @@ servers:
 paths:
   '/users/{username}':
     $ref: 'paths/users_{username}.yaml'
-  /echo:
-    $ref: paths/echo.yaml
+  /marketplaces/MarketplaceID/companies/SellerID/deliveries:
+    $ref: paths/mkt_to_seller.yaml
   /pathItem:
     $ref: paths/path-item.yaml
   /pathItemWithExamples:

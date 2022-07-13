@@ -1,12 +1,24 @@
 post:
   tags:
-    - Echo
-  summary: Echo test
-  description: Receive the exact message you've sent
+    - Deliveries
+  summary: Create delivery in seller as a Marketplace
+  description: Through this endpoint you can create deliveries in a seller company from the markerplace company, so the deliveries will be visible to both, the seller and the marketplace as long as they are consulted with a user with the appropriate role. 
   operationId: echo
   security:
     - api_key: []
-    - basic_auth: []
+  parameters:
+    - name: MarketplaceID
+      in: path
+      description: The marketplace that will create deliveries in seller
+      required: true
+      schema:
+        type: int
+    - name: SellerID
+      in: path
+      description: The seller that will recive the delivery order
+      required: true
+      schema:
+        type: int
   responses:
     '200':
       description: OK
@@ -37,13 +49,9 @@ post:
     content:
       application/json:
         schema:
-          type: string
-          example: Hello world!
-      application/xml:
-        schema:
-          type: string
-          example: Hello world!
-    description: Echo payload
+          $ref: ../components/schemas/delivery.yaml
+          type: object
+    description: Delivery order payload
     required: true
   x-codeSamples:
     - lang: "C#"

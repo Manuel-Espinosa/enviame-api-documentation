@@ -6,7 +6,7 @@ parameters:
       type: boolean
 get:
   tags:
-    - User
+    - Company
   summary: Get user by user name
   description: |
     Some description of the operation.
@@ -46,7 +46,7 @@ get:
       $ref: ../components/responses/Problem.yaml
 put:
   tags:
-    - User
+    - Company
   summary: Updated user
   description: This can only be done by the logged in user.
   operationId: updateUser

@@ -1,0 +1,128 @@
+type: object
+title: Delivery
+properties:
+  shipping_order:
+    properties:
+      n_packages:
+        description: REQUIRED. Quantity of packages in delivery order
+        required: true
+        type: int
+        examples:
+          - 2
+      content_description:
+        description: REQUIRED. A brief description of the product
+        required: true
+        type: string
+        examples:
+          - some cool jeans
+      imported_id:
+        description: REQUIRED. This is how you identify an order, 
+        required: true
+        type: string
+        examples:
+          - OMS123
+          - D-1234
+          - "12345"
+      order_price:
+        description: REQUIRED. This is the price of the product
+        required: true
+        type: float
+        examples:
+          - 1234.56
+      weight:
+        description: REQUIRED. This is the weight of the product. This values is needed in KG
+        required: true
+        type: float
+        examples:
+          - 12.34
+      volume:
+        description: REQUIRED. This is the volume of the product. This value is needed in m^3
+        required: true
+        type: float
+        examples:
+          - 12.34
+      type:
+        description: REQUIRED. This is a default value and always SHOULD be "delivery"
+        required: true
+        type: string
+        examples:
+          - delivery
+      only_create:
+        description: OPTIONAL. This value allows to only create a order without get a label and a tracking number when its value is TRUE, but if its value is FALSE the order will get a label automatically
+        required: true
+        type: bool
+        examples:
+          - true
+          - false
+  shipping_origin:
+    properties:
+      warehouse_code:
+        description: REQUIERED. This value is the code of the delivery warehouse origin
+        requiered: true
+        type: string
+        examples:
+          - "001"
+  shipping_destination:
+    properties:
+      customer:
+        properties:
+          name:
+            description: REQUIERED. This value is the name of the recipent
+            requiered: true
+            type: string
+            examples:
+              - "Jhon Doe"
+          email:
+            description: REQUIERED. This value is the email of the recipent
+            requiered: true
+            type: string
+            examples:
+              - "jhondoe@email.com"
+          phone:
+            description: REQUIERED. This value is the phone of the recipent
+            requiered: true
+            type: string
+            examples:
+              - "5525251592"
+      delivery_address:
+        properties:
+          home_address:
+            properties:
+              place:
+                description: REQUIERED. This is the name of the destination place
+                requiered: TRUE
+                type: string
+                examples:
+                  - Springwood
+              full_address:
+                description: REQUIERED. This is the destination address, it usually contains a street name and a number
+                requiered: true
+                type: string
+                examples:
+                  - 1428 Elm Street
+              information:
+                description: OPTIONAL. This is a field to add some relevant information about destination as a the color of the house or any helpful reference
+                requiered: TRUE
+                type: string
+                examples:
+                  - creppy house
+  carrier:
+    properties:
+      carrier_code:
+        description: This value MAY be OPTIONAL as long as the company has a rule for automatically inject the order in a certain carrier, if the company does not has a rule, this value is REQUIRED.
+        requiered: TRUE
+        type: string
+        examples:
+          - DHL
+      carrier_service:
+        description: This value MAY be OPTIONAL as long as the company has a rule for automatically inject the order in a certain carrier and with a certain service, like priority, express or normal. If you do not provide this value, the order will take that the carrier provides by default, but if you want to dispatch an order with a certain service this value is REQUIRED.
+        requiered: TRUE
+        type: string
+        examples:
+          - express
+      tracking_number:
+        description: This value is always provided by the carrier when recives and accept the order and you will find it in the response of this request, but if you already have a tracking number you can provide it
+        requiered: FALSE
+        type: string
+        examples:
+          - 
