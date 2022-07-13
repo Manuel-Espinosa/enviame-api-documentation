@@ -26,7 +26,7 @@ post:
         X-Rate-Limit:
           description: calls per hour allowed by the user
           schema:
-            type: numbereger
+            type: number
             format: int32
         X-Expires-After:
           $ref: ../components/headers/ExpiresAfter.yaml
