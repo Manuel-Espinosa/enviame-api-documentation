@@ -5,7 +5,7 @@ properties:
     properties:
       n_packages:
         description: required. Quantity of packages in delivery order
-        type: int
+        type: number
         examples:
           - 2
       content_description:
@@ -22,17 +22,17 @@ properties:
           - "12345"
       order_price:
         description: required. This is the price of the product
-        type: float
+        type: number
         examples:
           - 1234.56
       weight:
         description: required. This is the weight of the product. This values is needed in KG
-        type: float
+        type: number
         examples:
           - 12.34
       volume:
         description: required. This is the volume of the product. This value is needed in m^3        
-        type: float
+        type: number
         examples:
           - 12.34
       type:
@@ -105,7 +105,6 @@ properties:
           - express
       tracking_number:
         description: This value is always provided by the carrier when recives and accept the order and you will find it in the response of this request, but if you already have a tracking number you can provide it
-        required: FALSE
         type: string
         examples:
           - 
