@@ -1,37 +1,23 @@
-This is an **example** API to demonstrate features of the OpenAPI specification.
+This is the **stage** API environment of Enviame, this site is intended to be a starting point for begin to consume our delivery logistic technology.
 
 # Introduction
 
-This API definition is intended to to be a good starting point for
-describing your API in 
+This API definition will allow you to create a complete integration of your delivery operations with the technology of Enviame in a safe and stable **stage** environment, so all the delivery orders you dispatch through the following paths will be avalivable in [Our Stage Platform](http://sandbox.easypoint.co/).
 
-[OpenAPI/Swagger
-format](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.2.md).
-
-It also demonstrates features of the
-[create-openapi-repo](https://github.com/Redocly/create-openapi-repo) tool
-and 
-
-the [Redoc](https://github.com/Redocly/Redoc) documentation engine. Beyond
-the standard OpenAPI syntax, we use a few 
-
-[vendor
-extensions](https://github.com/Redocly/Redoc/blob/master/docs/redoc-vendor-extensions.md).
+It also demonstrates all features of the
+[Production Platform](https://github.com/Redocly/create-openapi-repo).
 
 
-# OpenAPI Specification
 
-The goal of The OpenAPI Specification is to define a standard,
-language-agnostic interface to REST APIs which
+# What Enviame Stage Enviroment is capable?
 
-allows both humans and computers to discover and understand the capabilities
-of the service without access to source
+In this documentation you will find all the available **endpoints** of our API.
+To use any of the following endpoints, a company id is needed, as well as your company API Key.
 
-code, documentation, or through network traffic inspection. When properly
-defined via OpenAPI, a consumer can 
+You can find that information in your [company profile](http://sandbox.easypoint.co/).
 
-understand and interact with the remote service with a minimal amount of
-implementation logic. Similar to what
+<img src="./media/company_info.png" width="600" height="400"/>
 
-interfaces have done for lower-level programming, OpenAPI removes the
-guesswork in calling the service.
+/*
+Insert something more here...
+*/

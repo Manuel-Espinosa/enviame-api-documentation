@@ -1,16 +1,16 @@
 openapi: 3.1.0
 info:
   version: 1.0.0
-  title: Example.com
+  title: Enviame Stage Enviroment
   termsOfService: 'https://example.com/terms/'
   contact:
-    email: contact@example.com
-    url: 'http://example.com/contact'
+    email: support@enviame.io
+    url: 'https://enviame.io/'
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
-    url: 'https://redocly.github.io/openapi-template/logo.png'
+    url: 'https://enviame.io/wp-content/uploads/2020/09/logo-enviame-dark.png'
   description:
     $ref: ./info-description.md
 tags:
