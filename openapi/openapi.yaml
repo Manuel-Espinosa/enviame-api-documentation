@@ -30,7 +30,7 @@ servers:
 paths:
   '/users/{username}':
     $ref: 'paths/users_{username}.yaml'
-  /marketplaces/MarketplaceID/companies/SellerID/deliveries:
+  'marketplaces/{MarketplaceID}/companies/{SellerID}/deliveries'
     $ref: paths/mkt_to_seller.yaml
   /pathItem:
     $ref: paths/path-item.yaml

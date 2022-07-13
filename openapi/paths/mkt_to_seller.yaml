@@ -12,13 +12,13 @@ post:
       description: The marketplace that will create deliveries in seller
       required: true
       schema:
-        type: int
+        type: number
     - name: SellerID
       in: path
       description: The seller that will recive the delivery order
       required: true
       schema:
-        type: int
+        type: number
   responses:
     '200':
       description: OK
@@ -26,7 +26,7 @@ post:
         X-Rate-Limit:
           description: calls per hour allowed by the user
           schema:
-            type: integer
+            type: numbereger
             format: int32
         X-Expires-After:
           $ref: ../components/headers/ExpiresAfter.yaml
