@@ -21,17 +21,14 @@ tags:
   - name: Pick up
     description: This is a tag description.
 servers:
-  - url: 'https://stage.api.enviame.io/api/s2/v2/'
-    variables:
-      tenant:
-        default: www
-        description: Your tenant id
+  - url: 'https://stage.api.enviame.io/api/s2/v2'
+    
   - url: 'https://example.com/api/v1'
 paths:
   '/users/{username}':
     $ref: 'paths/users_{username}.yaml'
-  'marketplaces/{MarketplaceID}/companies/{SellerID}/deliveries':
-    $ref: paths/mkt_to_seller.yaml
+  '/marketplaces/{MarketplaceID}/companies/{SellerID}/deliveries':
+    $ref: 'paths/mkt_to_seller.yaml'
   /pathItem:
     $ref: paths/path-item.yaml
   /pathItemWithExamples:
